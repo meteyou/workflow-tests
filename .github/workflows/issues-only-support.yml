@@ -1,4 +1,4 @@
-name: Close support tickets
+name: Label Action
 
 on:
   issues:
