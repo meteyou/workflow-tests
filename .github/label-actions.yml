@@ -1,6 +1,15 @@
-Support:
+not on Github:
   comment: |
-    Please use our Discord-Server for Support
+    It looks like this ticket is a request for help (or similar). Many helpful people will not see your message here and you are unlikely to get a useful response.
     
-    [Mainsail Discord](https://discord.gg/mainsail)
+    We use github to handle bugreports, feature requests and planning new releases.
+    
+    Please use our Discord-Server for help: [discord.gg/mainsail](https://discord.gg/mainsail)
+  
+    This ticket will be automatically closed.
+  
+    Best regards,
+    ~ Your friendly GitIssueBot
+
+    *PS: I'm just an automated script, not a human being.*
   close: true
