@@ -1,0 +1,25 @@
+{
+  "name": "workflow-tests",
+  "version": "1.0.0",
+  "description": "This is only a Github actions test repo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteyou/workflow-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meteyou/workflow-tests/issues"
+  },
+  "homepage": "https://github.com/meteyou/workflow-tests#readme",
+  "dependencies": {
+    "semver": "^7.3.7"
+  },
+  "devDependencies": {
+    "sass": "^1.54.3"
+  }
+}
