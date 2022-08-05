@@ -1,35 +1,45 @@
-not on Github:
-  comment: |
-    It looks like this ticket is a request for help (or similar). Many helpful people will not see your message here and you are unlikely to get a useful response.
-    
-    We use github to handle bugreports, feature requests and planning new releases.
-    
-    Please use our Discord-Server for help: [discord.gg/mainsail](https://discord.gg/mainsail)
-  
-    This ticket will be automatically closed.
-  
-    Best regards,
-    ~ Your friendly GitIssueBot
+# Configuration for Label Actions - https://github.com/dessant/label-actions
 
-    *PS: I'm just an automated script, not a human being.*
-  close: true
+not on Github:
+  issues:
+    comment: |
+      Ahoi!
+
+      It looks like this ticket is a request for help (or similar).
+      Many helpful people will not see your message here and you are
+      unlikely to get a useful response.
+
+      We use github to handle bugreports, feature requests and
+      planning new releases.
+
+      Please use our Discord-Server for help: [discord.gg/mainsail](https://discord.gg/mainsail)
+
+      This ticket will be automatically closed.
+
+      Fair wind and a following sea!
+      ~ Your friendly MainsailGithubBot
+
+      *PS: I'm just an automated script, not a real sailor.*
+    close: true
 
 stale:
-  comment: |
-    Hello,
-    
-    It looks like there hasn't been any recent updates on this
-    Mainsail github pull request.  If you created this issue and
-    no longer consider it open, then please login to github and
-    close the issue.  Otherwise, if there is no further activity
-    on this thread then it will be automatically closed in a few
-    days.
-    
-    Best regards,
-    ~ Your friendly GitIssueBot
-  
-    *PS: I'm just an automated script, not a human being.*
-  close: true
+  prs:
+    comment: |
+      Ahoi!
+
+      It looks like there hasn't been any recent updates on
+      this pull request. If you created this pull request and
+      no longer consider it to get merged, then please login
+      to github and close it. Otherwise, if there is no further
+      activity on this pull request, it will be automatically
+      closed within the next 7 days.
+
+      Fair wind and a following sea!
+      ~ Your friendly MainsailGithubBot
+
+      *PS: I'm just an automated script, not a real sailor.*
+    close: true
 
 -stale:
-  reopen: true
+  prs:
+    reopen: true
