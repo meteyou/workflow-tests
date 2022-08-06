@@ -1,9 +1,6 @@
 name: 'Auto add analyze label if package.json was edited'
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
