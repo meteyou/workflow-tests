@@ -38,3 +38,20 @@ jobs:
               repo: context.repo.repo,
               labels: ['analyze']
             })
+
+      - name: Run step if any of the listed files above change
+        if: steps.changed-file-package-json.outputs.any_changed == 'true'
+        run: |
+          echo "One or more files listed above has changed."
+
+      - name: Run step if only the files listed above change
+        if: steps.changed-file-package-json.outputs.only_changed == 'true'
+        run: |
+          echo "Only files listed above have changed."
+
+      - name: Run step if all listed files above have been deleted
+        if: steps.changed-files.outputs.only_deleted == 'true'
+        run: |
+          for file in ${{ steps.changed-files.outputs.changed_files }}; do
+            echo "$file was changed"
+          done
