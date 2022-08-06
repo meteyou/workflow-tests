@@ -1,6 +1,6 @@
 {
   "name": "workflow-tests",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is only a Github actions test repo.",
   "main": "index.js",
   "scripts": {
