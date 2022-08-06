@@ -10,11 +10,16 @@ permissions:
 
 jobs:
   add-analyze-label:
+    name: 'Add analyze label'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v24.1
 
       - name: Get packaged.json is changed file
         id: changed-file-package-json
@@ -24,7 +29,7 @@ jobs:
             package.json
 
       - name: Add Label
-        if: steps.changed-file-package-json.outputs.only_changed == 'true'
+        if: steps.changed-file-package-json.outputs.any_changed == 'true'
         uses: actions/github-script@v6
         with:
           script: |
