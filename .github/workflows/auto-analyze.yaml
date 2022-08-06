@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   add-analyze-label:
+    name: 'Add analyze label'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
