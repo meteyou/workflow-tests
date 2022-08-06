@@ -24,7 +24,7 @@ jobs:
             package.json
 
       - name: Add Label
-        if: steps.cchanged-file-package-json.outputs.only_changed == 'true'
+        if: steps.changed-file-package-json.outputs.only_changed == 'true'
         uses: actions/github-script@v6
         with:
           script: |
