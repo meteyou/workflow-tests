@@ -1,0 +1,39 @@
+name: 'Auto add analyze label if package.json was edited'
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  pull-requests: write
+
+jobs:
+  add-analyze-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get packaged.json is changed file
+        id: changed-file-package-json
+        uses: tj-actions/changed-files@v24.1
+        with:
+          files: |
+            package.json
+
+      - name: Add Label
+        if: steps.cchanged-file-package-json.outputs.only_changed == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['analyze']
+            })
