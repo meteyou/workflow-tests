@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  add-analyze-label:
+  auto-analyze:
     name: 'Add analyze label'
     runs-on: ubuntu-latest
     steps:
